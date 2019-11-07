@@ -5,10 +5,29 @@ import LoginScreen from './screens/Login';
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 
-const MainNavigator = createStackNavigator({
-  Home: {screen: FrontpageScreen},
-  Login: {screen: LoginScreen},
-});
+const MainNavigator = createStackNavigator(
+  {
+    Home: {screen: FrontpageScreen},
+    Login: {screen: LoginScreen},
+  },
+  {
+    headerMode: 'none',
+    headerStyle: {
+      backgroundColor: '#f4511e',
+    },
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: '#003366',
+        opacity: 1,
+        zIndex: 1,
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      },
+    },
+  },
+);
 
 const MainApp = createAppContainer(MainNavigator);
 
