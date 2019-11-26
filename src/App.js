@@ -1,14 +1,14 @@
 import React, {Fragment} from 'react';
 import {SafeAreaView, StyleSheet} from 'react-native';
 import FrontpageScreen from './screens/Frontpage';
-import LoginScreen from './screens/Login';
+import LoginEmpresa from './screens/login/LoginEmpresa';
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 
 const MainNavigator = createStackNavigator(
   {
     Home: {screen: FrontpageScreen},
-    Login: {screen: LoginScreen},
+    Login: {screen: LoginEmpresa},
   },
   {
     headerMode: 'none',
